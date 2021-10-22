@@ -1,0 +1,21 @@
+ALGORITHM phrase_checkpoint
+VAR
+    i=1,nb_mots:=1,nb_voy:=0,len:INTEGER
+    j: CHAR
+    ch:STRING := "At this checkpoint, you are asked to write an algorithm that read a sentence, which ends with a point."
+BEGIN
+j=ch[i]
+WHILE (j <> '.') DO
+    IF (j==' ') THEN
+        nb_mots=nb_mots+1
+    ELSE
+        IF (ch[i] in ['a','e','i','o','u','y'] or ch[i] in ['A','E','O','I','U','Y']) THEN
+            nb_voy=nb_voy+1
+        END_IF
+    END_IF
+    i=i+1
+    j=ch[i]
+    len=i
+END_WHILE
+
+END

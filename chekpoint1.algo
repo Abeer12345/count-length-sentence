@@ -2,8 +2,10 @@ ALGORITHM phrase_checkpoint
 VAR
     i=1,nb_mots:=1,nb_voy:=0,len:INTEGER
     j: CHAR
-    ch:STRING := "At this checkpoint, you are asked to write an algorithm that read a sentence, which ends with a point."
+    ch:STRING
 BEGIN
+write("donner une phrase qui se termine par un point")
+read(ch)
 j=ch[i]
 WHILE (j <> '.') DO
     IF (j==' ') THEN
